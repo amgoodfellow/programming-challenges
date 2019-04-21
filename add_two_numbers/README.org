@@ -22,3 +22,31 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 #+end_src
 
+* Test Cases
+  From the leetcode example:
+  #+begin_src 
+  Given:
+  [2, 4, 3]
+  [5, 6, 4]
+
+  Return:
+  [7, 0, 8]
+  #+end_src
+  Adding numbers of unequal size:
+  #+begin_src 
+  Given:
+  [2, 4, 3]
+  [5]
+
+  Return:
+  [7, 4, 3]
+  #+end_src
+  Adding very large numbers:
+  #+begin_src 
+  Given:
+  [3, 2, 2, 2, 5, 0, 4, 8, 6]
+  [6, 0, 4, 8, 4, 6, 7, 7, 5, 1, 4, 5, 6, 7, 8]
+  
+  Return:
+  [9, 2, 6, 0, 0, 7, 1, 6, 2, 2, 4, 5, 6, 7, 8]
+  #+end_src
