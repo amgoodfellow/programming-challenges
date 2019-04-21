@@ -1,0 +1,24 @@
+#+TITLE: Programming Challenge Repo
+#+OPTIONS: toc:nil
+
+* Purpose
+This repo is kind of an experiment, I guess. I think it would be cool to start a little weekly
+challenge among my group of programmer friends where we solve a simple, interview-like question with
+whatever language we want. It could even be used to learn a language that we're not familiar with. 
+
+Hopefully, if all turns out well, a new question will appear at the start of each week (or maybe  
+every other week), along with some simple test cases. Then people can submit their own solutions, 
+and at the end I can write up a little document referencing each one - comparing performance and 
+style. It'll be a fun, and interesting way to see other languages and techniques, I think.
+
+* Contributing
+If you want to be on the list of contributors but aren't currently, feel free to submit an issue in 
+the repo! I think it would be really cool to get a decent sized group doing these things, when they
+have the time.
+
+When submitting a solution to a challenge, please submit it in the correct folder with the format of
+~username.language-extension~. I think that should work well enough to keep things unique, and
+people can even submit multiple solutions in different languages!
+
+I'm not sure yet how I should handle test cases so that it's convenient to compare results. If
+anyone has any suggestions, I'd be open to them.
