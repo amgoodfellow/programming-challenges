@@ -1,0 +1,24 @@
+#+TITLE: Add Two Problem
+#+OPTIONS: toc:nil
+
+* Problem Introduction
+This is a problem from [[https://leetcode.com/problems/add-two-numbers/][leet code]], which is a really cool website! In fact, it might be nice to use
+their site while attempting this problem because of their integrated test-cases. Fair warning 
+though, I don't like their custom data-structures. I'd rather they just used the language default 
+list structure.
+
+** Description
+#+BEGIN_QUOTE
+You are given two non-empty linked lists representing two non-negative integers. The digits are 
+stored in reverse order and each of their nodes contain a single digit. Add the two numbers and
+return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+#+END_QUOTE
+
+#+begin_src 
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+Explanation: 342 + 465 = 807.
+#+end_src
+
