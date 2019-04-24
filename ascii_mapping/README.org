@@ -1,0 +1,17 @@
+#+TITLE: ASCII Mapping
+#+OPTIONS: toc:nil
+
+* Problem Introduction
+This is a logic/programming problem from @nickwoodle. Given a series of string inputs, and a series
+of floating point outputs, find the mapping between the two. Then, write an algorithm for the 
+mapping.
+
+** Input / Output
+
+| Input       |  Output |
+|-------------+---------|
+| Hello       |     100 |
+| Test        |     104 |
+| QWERTY      |      82 |
+| !@#$%^&     | 48.1428 |
+| This is fun | 87.8333 |
