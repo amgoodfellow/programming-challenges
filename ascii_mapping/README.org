@@ -2,7 +2,7 @@
 #+OPTIONS: toc:nil
 
 * Problem Introduction
-This is a logic/programming problem from @nickwoodle. Given a series of string inputs, and a series
+This is a logic/programming problem from [[https://github.com/nickwoodle][@nickwoodle]]. Given a series of string inputs, and a series
 of floating point outputs, find the mapping between the two. Then, write an algorithm for the 
 mapping.
 

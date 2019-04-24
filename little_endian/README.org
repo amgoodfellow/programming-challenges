@@ -2,7 +2,7 @@
 #+OPTIONS: toc:nil
 
 * Problem Introduction
-This is a problem from @TheAbsoluteValue. 
+This is a problem from [[https://github.com/TheAbsoluteValue][@TheAbsoluteValue]]
 
 Make a function that has two arguments. The first one is a string representation of a number, and 
 the second is the base of the string number provided. The output should be that number in little 
