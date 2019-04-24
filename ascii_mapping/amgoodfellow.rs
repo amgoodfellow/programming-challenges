@@ -1,5 +1,5 @@
-fn calc_num(word : &str) -> f32 {
-    let total : usize = word.chars().map(|x| {x as usize}).sum();
+fn calc_num(word: &str) -> f32 {
+    let total: usize = word.chars().map(|x| x as usize).sum();
     total as f32 / word.len() as f32
 }
 
