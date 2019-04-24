@@ -15,3 +15,24 @@ mapping.
 | QWERTY      |      82 |
 | !@#$%^&     | 48.1428 |
 | This is fun | 87.8333 |
+
+* Solutions:
+
+** amgoodfellow
+So far this person has submitted two solutions, one in Rust and one in Common Lisp
+
+*** Rust
+#+INCLUDE: "./amgoodfellow.rs" src rust :lines "1-5"
+
+Comments:
+
+There's probably a better way to handle all the casting that I'm doing, but this seems to pass all
+the necessary test cases.
+
+*** Common Lisp
+#+INCLUDE: "./amgoodfellow.lisp" src lisp
+
+Comments:
+
+Again, I'm sure there's a better, more concise way to do all this, but. This is what I'm able to do
+right now
