@@ -1,0 +1,20 @@
+#+TITLE: Little Endian
+#+OPTIONS: toc:nil
+
+* Problem Introduction
+This is a problem from @TheAbsoluteValue. 
+
+Make a function that has two arguments. The first one is a string representation of a number, and 
+the second is the base of the string number provided. The output should be that number in little 
+endian form.
+
+For more information about little endian, click [[https://en.wikipedia.org/wiki/Endianness][here]]
+
+** Example Input / Output
+
+| Input     | Output |
+|-----------+--------|
+| 35582, 10 |  65612 |
+| 8AFE, 16  |   FE8A |
+| 332, 16   |   3203 |
+
