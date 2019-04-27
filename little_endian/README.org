@@ -18,3 +18,48 @@ For more information about little endian, click [[https://en.wikipedia.org/wiki/
 | 8AFE, 16  |   FE8A |
 | 332, 16   |   3203 |
 
+* Solutions
+** amgoodfellow
+*** Racket
+#+begin_src racket :exports code
+; Algorithm in question
+(define (num->little-endian str base)
+  (cond
+    [(= base 16) (apply string-append (reverse (string->two-chars (validate-input str))))]
+    [(= base 10)
+     (hex->dec (num->little-endian (validate-input (dec->hex (string->number str))) 16))]
+    [else "Invalid input"]))
+
+; Helper method that splits strings into two char lists
+(define (string->two-chars str)
+  (if (zero? (string-length str)) null
+    (cons (substring str 0 2) (string->two-chars (substring str 2)))))
+
+; Additional helper methods like 'dec->hex' defined in amgoodfellow.rkt
+#+end_src
+**** Test Cases
+| Input      | Expected | Output  |
+|------------+----------+---------|
+| "35582" 10 |    65612 | "65162" |
+| "8AFE" 16  |     FE8A | "FE8A"  |
+| "332" 16   |     3203 | "3203"  |
+
+** TheAbsoluteValue
+*** JavaScript
+#+header: :exports code
+#+begin_src js
+function hi3(num, base) {
+	let hi = num.toString(16);
+	if (hi.length % 2 === 1)
+		hi = '0' + hi;
+	return Number(`0x${hi.match(/.{1,2}/g).reverse().join('')}`)
+}
+#+end_src
+
+**** Test Cases
+
+| Input      | Expected | Output |
+|------------+----------+--------|
+| 35582, 10  |    65612 |  65612 |
+| '8AFE', 16 |     FE8A |  65162 |
+| '332', 16  |     3203 |  12803 |
