@@ -10,6 +10,10 @@ endian form.
 
 For more information about little endian, click [[https://en.wikipedia.org/wiki/Endianness][here]]
 
+Since a couple different people have asked for more information on this one, I'll add the following basic description as I understand it:
+
+You have to break the number into bytes (which would be hex pairs), and reverse the order of all the bytes. So for hexadecimal it's an easy conversion. You just have to reverse the order of every pair of hexadecimal digits. For base 10 numbers though it's harder. That's where the challenge of this problem comes into play, particularly if your language doesn't have a utility method for base conversion in its standard library
+
 ** Example Input / Output
 
 | Input     | Output |
