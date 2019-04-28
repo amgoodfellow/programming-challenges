@@ -8,13 +8,13 @@ mapping.
 
 ** Input / Output
 
-| Input       |  Output |
-|-------------+---------|
-| Hello       |     100 |
-| Test        |     104 |
-| QWERTY      |      82 |
-| !@#$%^&     | 48.1428 |
-| This is fun | 87.8333 |
+| Input        |  Output |
+|--------------+---------|
+| Hello        |     100 |
+| Test         |     104 |
+| QWERTY       |      82 |
+| !@#$%^&      | 48.1428 |
+| This is fun! | 87.8333 |
 
 * Solutions:
 
@@ -22,7 +22,22 @@ mapping.
 So far this person has submitted two solutions, one in Rust and one in Common Lisp
 
 *** Rust
-#+INCLUDE: "./amgoodfellow.rs" src rust :lines "1-5"
+    #+begin_src rust :exports code
+fn calc_num(word: &str) -> f32 {
+    let total: usize = word.chars().map(|x| x as usize).sum();
+    total as f32 / word.len() as f32
+}
+    #+end_src
+
+
+**** Test Cases
+| Input        | Expected |    Output |
+|--------------+----------+-----------|
+| Hello        |      100 |     100.0 |
+| Test         |      104 |     104.0 |
+| QWERTY       |       82 |      82.0 |
+| !@#$%^&      |  48.1428 | 48.142857 |
+| This is fun! |  87.8333 | 87.833336 |
 
 Comments:
 
@@ -30,9 +45,42 @@ There's probably a better way to handle all the casting that I'm doing, but this
 the necessary test cases.
 
 *** Common Lisp
-#+INCLUDE: "./amgoodfellow.lisp" src lisp
+#+begin_src lisp :exports code
+(defun get-num (str)
+  (/ (apply '+ (map 'list (lambda (c) (char-int c)) (coerce str 'list))) (length str)))
+#+end_src
+
+**** Test Cases
+| Input        | Expected |    Output |
+|--------------+----------+-----------|
+| Hello        |      100 |       100 |
+| Test         |      104 |       104 |
+| QWERTY       |       82 |        82 |
+| !@#$%^&      |  48.1428 | 48.142857 |
+| This is fun! |  87.8333 | 87.833336 |
 
 Comments:
 
 Again, I'm sure there's a better, more concise way to do all this, but. This is what I'm able to do
 right now
+** kdjohnson
+
+*** Go
+   #+begin_src go :exports code
+func mapping(s string) float64 {
+	var sum float64
+	for _, j := range s {
+		sum += float64(j)
+	}
+	return float64(sum) / float64(len(s))
+}
+   #+end_src
+
+**** Test Cases
+| Input        | Expected |    Output |
+|--------------+----------+-----------|
+| Hello        |      100 |       100 |
+| Test         |      104 |       104 |
+| QWERTY       |       82 |        82 |
+| !@#$%^&      |  48.1428 | 48.142857 |
+| This is fun! |  87.8333 | 87.833336 |
