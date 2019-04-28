@@ -1,0 +1,28 @@
+#+TITLE: Min Change
+#+OPTIONS: toc:nil
+
+* Problem Introduction
+This is a variation of an interview question once asked of [[https://github.com/amgoodfellow][@amgoodfellow]]
+
+As an article on [[geeksforgeeks][https://www.geeksforgeeks.org/]] phrases this question:
+
+#+BEGIN_QUOTE
+Given a value V, if we want to make change for V cents, and we have infinite supply of each of 
+~C = { C1, C2, .. , Cm}~ valued coins, what is the minimum number of coins to make the change?
+#+END_QUOTE
+
+#+begin_src 
+Input: coins[] = {25, 10, 5, 1}, V = 30
+Output: Minimum 2 coins required
+#+end_src
+
+So, in other words, given an array of coin denominations (of natural numbers with at least one 1), 
+and a natural number V, output the minimum number of coins we can use to get to value V.
+
+** Example Input / Output
+
+| Input              | Output |
+|--------------------+--------|
+| 30, [25, 10, 5, 1] |      2 |
+| 55, [50, 20, 1]    |      6 |
+| 63, [50, 20, 1]    |      6 |
