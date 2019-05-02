@@ -84,3 +84,25 @@ func mapping(s string) float64 {
 | QWERTY       |       82 |        82 |
 | !@#$%^&      |  48.1428 | 48.142857 |
 | This is fun! |  87.8333 | 87.833336 |
+
+** TheAbsoluteValue
+
+*** JavaScript
+#+begin_src javascript :exports code
+function hi2(str) {
+	return str.split('').reduce((a,b) => a + b.charCodeAt(0), 0) / str.length;
+}
+#+end_src
+
+**** Test Cases
+| Input        | Expected |    Output |
+|--------------+----------+-----------|
+| Hello        |      100 |       100 |
+| Test         |      104 |       104 |
+| QWERTY       |       82 |        82 |
+| !@#$%^&      |  48.1428 | 48.142857 |
+| This is fun! |  87.8333 | 87.833333 |
+
+Comments:
+
+It essentially splits every character of the string into an array of only characters, then uses a reducer (Array.prototype.reduce) to count up all the ASCII charcodes and then divides by the string length.
