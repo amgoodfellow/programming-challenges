@@ -1,0 +1,34 @@
+#+TITLE: String Calculator Kata
+#+OPTIONS: toc:nil
+
+* Problem Introduction
+This is a string kata (designed for TDD practice) from [[https://osherove.com/tdd-kata-1/][Roy Osherove's blog]].
+
+Basically, we want to create some 'add' function that takes a string of numbers separated by some delimiter.
+
+There are two default delimiters that should be detected: ~\n~ and ~,~.
+
+Users can specify their own single-character delimiter if their string is of the following form: ~"//;\n1;2;3"~ That is,
+a single character special delimiter can be put after ~//~ and before ~\n~. This /includes/ the new custom delimiter in
+the list of possible delimiters. For example: ~"//;\n1;2,3\n4" is still a valid string
+
+Users can also specify multiple custom delimiters of multiple characters if their string is of the following form:
+~"//[;;;][``]\n1;;;2;;;3``7"~. That is, a block of one or more ~[<chars>]~ can occur after ~//~ and before ~\n~. These
+blocks contain one or more characters inside of them which should be added to the list of possible delimiters.
+
+Finally, no negative numbers are allowed. If there are any in the string, the function should give an error and list
+the negative numbers it found.
+
+Again, Roy Osherove's blog might be easier to follow. And it's an interesting look at how TDD can help you form a
+solution.
+
+| Input | Output |
+|-------+--------|
+| ""    | 0      |
+| "1"   | 1      |
+|"1,2"  | 3      |
+|"1,2\n4"|7      |
+| "//;\n1;2,3 "| 6 |
+| "//[$$]\n1$$2,3" | 6 |
+| "//[$$][@]\n1@2$$3" | 6 |
+| "1,2,-3" | "Negative error: -3" |
